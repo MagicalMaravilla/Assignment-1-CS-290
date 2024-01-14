@@ -17,6 +17,34 @@
         <p id="timer">Loading...</p>
     </section>
 
+    <!-- JavaScript for Countdown Timer -->
+    <script>
+        function updateCountdown() {
+            const earthDay = new Date('April 22, 2024 00:00:00').getTime();
+            const now = new Date().getTime();
+            const difference = earthDay - now;
+
+            // Time calculations for days, hours, minutes, and seconds
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="timer"
+            document.getElementById('timer').innerHTML = days + " Days " + hours + " Hours " 
+            + minutes + " Minutes " + seconds + " Seconds ";
+
+            // If the countdown is finished, write some text
+            if (difference < 0) {
+                clearInterval(x);
+                document.getElementById('timer').innerHTML = "Earth Day is here!";
+            }
+        }
+
+        // Update the countdown every 1 second
+        let x = setInterval(updateCountdown, 1000);
+    </script>
+
     <section id="about-earth-day">
         <h2>About Earth Day</h2>
         <p>Earth Day is an annual event celebrated on April 22 to demonstrate support for environmental protection...</p>
@@ -45,11 +73,21 @@
 
     <section>
         <h2>Earth Day Gallery</h2>
-        <img src="https://example.com/earth-day-image.jpg" alt="Earth Day Celebration" width="500" height="300">
-        <video width="320" height="240" controls>
-            <source src="path_to_video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <!-- First Earth Day Image -->
+        <a href="https://ibb.co/G5HVVhG">
+            <img src="https://i.ibb.co/wzcKKv8/149136b0-c4da-4b0d-ac37-b15896ab098e.webp" alt="Earth Day Celebration" width="500" height="300">
+        </a>
+        <!-- Second Earth Day Image -->
+        <a href="https://ibb.co/GcWWLpZ">
+            <img src="https://i.ibb.co/wMSSXgn/597af908-d49d-46c1-995f-94f75bc9d830.webp" alt="Animals Celebrating Earth Day" width="500" height="300">
+        </a>
+    </section>
+    
+
+    <section>
+        <h2>Earth Day Video</h2>
+        <p>Watch this video to learn more about Earth Day:</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PL31i1cu22U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
 
     <section>

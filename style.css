@@ -1,56 +1,90 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #e7f5eb; /* Light green background */
-    color: #333; /* Dark text for readability */
+    background-color: #f4f4f4; /* Neutral background for a modern look */
+    color: #333;
     text-align: center;
     padding: 20px;
+    margin: 0;
 }
+
 header {
-    background-color: #4caf50; /* Darker green for the header */
+    background-color: #2e8b57; /* Earthy green for the header */
     color: white;
     padding: 20px 0;
     margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
+
 #timer {
     font-size: 3em;
-    color: #d35400; /* Orange color for the timer */
+    color: #d35400;
     margin: 20px 0;
     padding: 10px;
-    background-color: #f9f9f9; /* Light background for the timer */
+    background-color: #ffffff;
     border-radius: 10px;
     display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 section {
     margin-bottom: 20px;
+    background-color: #ffffff; /* White background for content sections */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 h2, h3, h4 {
-    color: #2c3e50; /* Dark blue for subheadings */
+    color: #2c3e50;
 }
+
 a {
-    color: #2e8b57; /* Green color for links */
+    color: #2e8b57;
     text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
+
 a:hover {
+    color: #1e6b43; /* Darker shade on hover */
     text-decoration: underline;
 }
+
 ul, ol {
     text-align: left;
     display: inline-block;
 }
+
 table {
     margin: auto;
     border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 th, td {
     padding: 8px;
     border: 1px solid #ddd;
 }
+
 th {
-    background-color: #4caf50;
+    background-color: #2e8b57;
     color: white;
 }
+
 footer {
-    background-color: #333;
+    background-color: #2c3e50; /* Dark footer for contrast */
     color: white;
     padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    header, section, footer {
+        padding: 15px;
+    }
+    #timer {
+        font-size: 2em;
+    }
 }
